@@ -26,11 +26,12 @@ vercel login
 ```
 
 ![Login on vercel on CLI](Vercel_Login.png)
-### Now go to the Next.js project directory and give the following command to deploy to cloud
+### Now go to the Next.js project directory and give the following command to deploy your Project to cloud
 ```bash
 vercel
 ```
-### Now If to want to update code on Vercel cloud:
+### Now If to want to update your existing code on Vercel cloud:
+Use this command
 ```bash
 vercel --prod
 ```
