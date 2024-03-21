@@ -1,40 +1,40 @@
 # Learn Modern Web Development using Next.js 13 in Baby Steps
+## Some Basic Commands You need to know
+### Create a New Next.js Project:
+- Open your terminal or command prompt.
+- Navigate to the directory where you want to create your project.
+- Run the following command to create a new Next.js project:
 
-[Must Read: Web Development in 2023: JavaScript Still Rules, AI Emerges](https://thenewstack.io/web-development-in-2023-javascript-still-rules-ai-emerges/)
+```bash
+npx create-next-app@latest my-first-nextjs-project
+```
+Replace `my-first-nextjs-project` with your desired project name. Navigate into your project directory using `cd my-first-nextjs-project`.
 
-Next.js Conf Keynote Announcing Version 13 :
+Make sure you select that options:
 
-[<img src="next13.png" width="75%">](https://www.youtube.com/watch?v=NiknNI_0J48 "Keynote Next.js 13")
-
-[The Future of the Web: From Cloud to Edge](https://www.youtube.com/watch?v=HlXLVb3QCvQ)
-
-### [Next.js 13 Docs](https://nextjs.org/docs)
-
-Before going forward check out this [directory of headless ecommerce stores that excel at both Design and Performance]. Also check out the [tools they are using](https://theheadlessclub.com/tools)
-
-The stack used in this learning repo, it is a mixture of [Jamstack](https://jamstack.org/) and [T3](https://create.t3.gg/) Stacks:
-[TypeScript](https://www.typescriptlang.org/),
-[Next.js 13](https://nextjs.org/blog/next-13),
-[Chakra UI](https://chakra-ui.com/),
-[tRPC](https://trpc.io/),
-[Prisma](https://www.prisma.io/),
-[Strapi](https://strapi.io/),
-[CockroachDB serverless](https://www.cockroachlabs.com/blog/announcing-cockroachdb-serverless/) (SQL), and [MongoDB Atlas](https://www.mongodb.com/atlas/database) (NoSQL).
-
-This repo is part of the [Certified Web 3.0 and Metaverse Developer Training Program](https://www.panaverse.co/)
-
-Before start learning from this repo, [learn TypeScript](https://github.com/panacloud-modern-global-apps/learn-typescript) and by doing these [TypeScript Node.js Projects](https://github.com/panacloud-modern-global-apps/chakra-nextjs-projects)
-
-[Checkout the Practice Problems for Next.js 13](https://www.practiceprobs.com/problemsets/nextjs/dunder-mifflin/)
-
-[Step By Step Guide To Full Stack Web Development | Next.js13 Tailwind Prisma Postgresql Typescript](https://www.youtube.com/watch?v=gxkwMm_j850)
-
-After completing this repo you should move to these specialized Web 3 learning repos:
-
-[Next Dapps Learning Repo](https://github.com/panacloud-modern-global-apps/dapps-nextjs)
-
-[Smart Contract Development Repo](https://github.com/panacloud-modern-global-apps/defi-dapps-solidity-smart-contracts)
-
-Learn Chakra UI by doing Projects:
-
-[Chakra UI Next Projects Repo](https://github.com/panacloud-modern-global-apps/chakra-nextjs-projects)
+![Vercel Project Options](Vercel_Project.png)
+## How to Deploy Project on Vercel
+### Install Vercel Globally
+```bash
+npm i -g vercel
+```
+### Login to Vercel on CLI
+```bash
+# It is a one time process
+vercel login
+```
+![Login on vercel on CLI](Vercel_Login.png)
+### Now go to the Next.js project directory and give the following command to deploy to cloud
+```bash
+vercel
+```
+### Now If to want to update code on Vercel cloud:
+```bash
+vercel --prod
+```
+## Deploy Your Project Using GitHub:
+- Ensure your project is pushed to a GitHub repository.
+- In the Vercel dashboard, click on the "New Project" button.
+- Select "Import Project" and choose your GitHub repository that contains your Next.js project.
+- Vercel will automatically detect your Next.js project and suggest deployment settings. Proceed with the recommended settings.
+- Click "Deploy" to start the deployment process. Vercel will build and deploy your project. 
