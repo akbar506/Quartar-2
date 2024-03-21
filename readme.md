@@ -8,7 +8,8 @@
 ```bash
 npx create-next-app@latest my-first-nextjs-project
 ```
-Replace `my-first-nextjs-project` with your desired project name. Navigate into your project directory using `cd my-first-nextjs-project`.
+- Replace `my-first-nextjs-project` with your desired project name. 
+- Navigate into your project directory using `cd my-first-nextjs-project`.
 
 Make sure you select that options:
 
@@ -23,6 +24,7 @@ npm i -g vercel
 # It is a one time process
 vercel login
 ```
+
 ![Login on vercel on CLI](Vercel_Login.png)
 ### Now go to the Next.js project directory and give the following command to deploy to cloud
 ```bash
