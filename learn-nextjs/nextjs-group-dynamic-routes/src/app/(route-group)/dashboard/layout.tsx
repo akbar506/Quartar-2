@@ -1,0 +1,14 @@
+import React, {ReactNode} from "react";
+
+export default function dashboardLayout({children}: {children: ReactNode}){
+    return (
+        <div className="flex gap-3">
+            <div className="bg-slate-400 h-80 py-3 px-2">
+                Dashboard Layout
+            </div>
+            <div>
+                {children}
+            </div>
+        </div>
+    );
+};
