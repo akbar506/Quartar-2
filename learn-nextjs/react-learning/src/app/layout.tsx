@@ -22,6 +22,7 @@ export default function RootLayout({
           <Link href={"/"}>Home</Link>
           <Link href={"/rendering-list"}>Rendering List</Link>
           <Link href={"/updating-screen"}>Updating Screen</Link>
+          <Link href={"/thining-in-react"}>Thinking in React</Link>
         </div>
         {children}
         </body>
