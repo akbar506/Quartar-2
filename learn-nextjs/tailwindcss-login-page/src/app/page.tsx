@@ -27,12 +27,8 @@ const LoginPage = () => {
                 <div className="rounded-md w-1/4 h-96 text-center justify-center mt-20 shadow-2xl">
                     <div className="font-bold mt-7 text-gray-500 text-2xl">Tailwind Login Page</div>
                     <form action="">
-                        <Login value={emailform} onChange={onChangeEmail} placeholder={"Enter your Email"} name={"Search"} type={"email"} onClick={function (event: React.MouseEvent<HTMLElement | HTMLButtonElement | HTMLDivElement, any>): void {
-                            throw new Error("Function not implemented.");
-                        }} />
-                        <Login value={passform} onChange={onChangePass} placeholder={"Enter your Password"} name={"Password"} type={"password"} onClick={function (event: React.MouseEvent<HTMLElement | HTMLButtonElement | HTMLDivElement, any>): void {
-                            throw new Error("Function not implemented.");
-                        }} />
+                        <Login value={emailform} onChange={onChangeEmail} placeholder={"Enter your Email"} name={"Search"} type={"email"} />
+                        <Login value={passform} onChange={onChangePass} placeholder={"Enter your Password"} name={"Password"} type={"password"} />
                         <div className="text-right mt-7 mr-10 text-blue-700 font-semibold">
                             <Link href={"/login"}>Forget Password ?</Link>
                         </div>
