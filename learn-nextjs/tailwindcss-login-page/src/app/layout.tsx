@@ -18,13 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex gap-4 p-4 bg-gray-300">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/rendering-list"}>Rendering List</Link>
-          <Link href={"/updating-screen"}>Updating Screen</Link>
-          <Link href={"/thining-in-react"}>Thinking in React</Link>
-          <Link href={"/login"}>Login</Link>
-        </div>
+      <Link href={"/"}>Home</Link>
+
         {children}
         </body>
     </html>
