@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AboutPage } from "@/components/About";
 import Profile from "@/components/Profile";
 import ConditionalRendering from "@/components/ConditionalRendering";

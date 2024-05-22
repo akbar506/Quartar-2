@@ -6,8 +6,8 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tailwind CSS Login Page",
-  description: "Tailwind CSS Login Page",
+  title: "React Learning",
+  description: "| React Learning",
 };
 
 export default function RootLayout({

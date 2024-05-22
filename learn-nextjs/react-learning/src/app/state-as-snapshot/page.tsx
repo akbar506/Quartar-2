@@ -41,13 +41,7 @@ function StateAsASnapShot() {
   //   );
   const [number, setNumber] = useState(0);
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState<todo[]>([
-    {
-      id: 1,
-      task: "This is my Task 1",
-      status: false,
-    },
-  ]);
+  const [todos, setTodos] = useState<todo[]>([{id: 1,task: "This is my Task 1",status: false,},]);
   //   console.log("🚀 ~ StateAsASnapShot ~ number:", number);
   // setTimeout(() => {
   console.log("🚀 ~ StateAsASnapShot ~ todos:", todos);
@@ -67,14 +61,8 @@ function StateAsASnapShot() {
   };
 
   const addTodo = () => {
-    const newTodos = [
-      ...todos,
-      {
-        id: todos.length + 1,
-        task: todo,
-        status: false,
-      },
-    ];
+    const newTodos = [...todos,{id: todos.length + 1,task: todo,status: false,},];
+    
     setTodos(newTodos);
   };
 
