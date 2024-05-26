@@ -1,4 +1,4 @@
-## [Get Started Page (ShadCN UI)](https://ui.shadcn.com/docs/components/accordion)
+## [Get Started Page (ShadCN UI)](https://ui.shadcn.com/docs)
 
 First, Create a Nextjs Project:
 
