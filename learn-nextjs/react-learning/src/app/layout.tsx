@@ -24,6 +24,8 @@ export default function RootLayout({
           <Link href={"/updating-screen"}>Updating Screen</Link>
           <Link href={"/thining-in-react"}>Thinking in React</Link>
           <Link href={"/login"}>Login</Link>
+          <Link href={"/state-as-snapshot"}>State as Snapshot</Link>
+          <Link href={"/useeffect"}>useEffect</Link>
         </div>
         {children}
         </body>

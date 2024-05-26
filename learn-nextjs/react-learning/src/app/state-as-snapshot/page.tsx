@@ -8,37 +8,39 @@ type todo = {
   status: boolean;
 };
 function StateAsASnapShot() {
-  //   const [isSent, setIsSent] = useState(false);
-  //   const [message, setMessage] = useState("Hi!");
-  //   console.log("🚀 ~ StateAsASnapShot ~ message:", message);
-  //   if (isSent) {
-  //     return <h1>Your message is on its way!</h1>;
-  //   }
+    // const [isSent, setIsSent] = useState(false);
+    // const [message, setMessage] = useState("Hi!");
+    // console.log("🚀 ~ StateAsASnapShot ~ message:", message);
+    // if (isSent) {
+    //   return <h1>Your message is on its way!</h1>;
+    // }
 
-  //   const sendMessage = (message: string) => {
-  //     alert(message);
-  //   };
+    // const sendMessage = (message: string) => {
+    //   alert(message);
+    // };
 
-  //   return (
-  //     <form
-  //       onSubmit={(e) => {
-  //         e.preventDefault();
-  //         setIsSent(true);
-  //         // sendMessage(message);
-  //       }}
-  //     >
-  //       {/* {condation ? true : condation ? } */}
-  //       <textarea
-  //         placeholder="Message"
-  //         value={message}
-  //         onChange={(e) => setMessage(e.target.value)}
-  //         className="h-12 border-zinc-100 border-2"
-  //       />
-  //       <button type="submit" className="bg-green-500 rounded-sm p-3">
-  //         Send
-  //       </button>
-  //     </form>
-  //   );
+    // return (
+    //   <form
+    //     onSubmit={(e) => {
+    //       e.preventDefault();
+    //       setIsSent(true);
+    //       // sendMessage(message);
+    //     }}
+    //   >
+    //     {/* {condation ? true : condation ? } */}
+    //     <textarea
+    //       placeholder="Message"
+    //       value={message}
+    //       onChange={(e) => setMessage(e.target.value)}
+    //       className="h-12 border-zinc-100 border-2"
+    //     />
+    //     <button type="submit" className="bg-green-500 rounded-sm p-3">
+    //       Send
+    //     </button>
+    //   </form>
+    // );
+
+
   const [number, setNumber] = useState(0);
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState<todo[]>([{id: 1,task: "This is my Task 1",status: false,},]);
