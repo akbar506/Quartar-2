@@ -6,6 +6,12 @@ First, Create a Nextjs Project:
 pnpm create create-next-app@latest
 ```
 
+Then, run the development server
+```bash
+pnpm dev
+```
+Open new terminal
+
 To use ShadCN UI, Run this commmand:
 ```
 pnpm dlx shadcn-ui@latest init
