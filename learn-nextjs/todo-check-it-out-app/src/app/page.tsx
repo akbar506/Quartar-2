@@ -43,6 +43,8 @@ export default function Home() {
   const [editedTask, setEditedTask] = useState<string>('');
   const { theme, setTheme } = useTheme()
   const newTodo = { id: todos.length + 1, task: task, status: false };
+
+  
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTask(event.target.value)
   }
@@ -118,7 +120,7 @@ export default function Home() {
             <h1 className="font-bold text-3xl text-center">Todo App</h1>
           </div>
           <div className="flex mt-5 justify-center p-5">
-            <Input placeholder="Enter todo" onChange={onInputChange} className="max-w-96" />
+            <Input placeholder="Enter task" onChange={onInputChange} className="max-w-96" />
             <Button className="text-black font-bold text-2xl p-3 rounded-full ml-5" onClick={onButtonClickAddTodo}>+</Button>
           </div>
 
@@ -143,7 +145,7 @@ export default function Home() {
                               </Button></AlertDialogTrigger>
                             <AlertDialogContent>
                               <AlertDialogHeader>
-                                <AlertDialogTitle>Edit Todo</AlertDialogTitle>
+                                <AlertDialogTitle>Edit Task</AlertDialogTitle>
                                 <AlertDialogDescription>
                                   Make changes to your Todo here. Click save when you're done.
                                 </AlertDialogDescription>
@@ -151,7 +153,7 @@ export default function Home() {
                               <div className="grid gap-4 py-4">
                                 <div className="grid grid-cols-4 items-center gap-4">
                                   <Label htmlFor="name" className="text-right">
-                                    Todo
+                                    Task
                                   </Label>
                                   <Input id="name" value={editedTask} onChange={handleInputChange} className="col-span-3" />
                                 </div>
