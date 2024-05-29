@@ -44,7 +44,7 @@ export default function Home() {
   const { theme, setTheme } = useTheme()
   const newTodo = { id: todos.length + 1, task: task, status: false };
 
-  
+
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTask(event.target.value)
   }
