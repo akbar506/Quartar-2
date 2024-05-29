@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Divide, Moon, Sun } from "lucide-react";
@@ -11,20 +11,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Label } from "@/components/ui/label"
 import { useTheme } from "@/components/theme-provider";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
 
 
 type todo = {
@@ -41,7 +43,6 @@ export default function Home() {
   const [editedTask, setEditedTask] = useState<string>('');
   const { theme, setTheme } = useTheme()
   const newTodo = { id: todos.length + 1, task: task, status: false };
-
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTask(event.target.value)
   }
@@ -129,26 +130,24 @@ export default function Home() {
                 <h4 className="mb-4 text-sm font-medium leading-none">List</h4>
                 {todos.map((todo) => (
                   <>
-                    <div className="flex items-center">
-                      <Checkbox className="mr-4 w-6 h-6 rounded-full" checked={checked} onClick={() => { handleRemoveTodo(todo.id); setChecked(false); }} />
-                      <div className="flex items-center">
-                        <div key={todo.task}>
+                    <div className="flex items-center ml-1">
+                      <Checkbox className="mr-4 w-6 h-6 rounded-full hover:outline-none hover:ring-2 hover:ring-ring hover:ring-offset-2" checked={checked} onClick={() => { handleRemoveTodo(todo.id); setChecked(false); }} />
+                      <div key={todo.id} className="flex items-center">
+                        <div>
                           {todo.task}
                         </div>
                         <div className="ml-4">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button variant="ghost" className="p-0" onClick={() => handleEditTodo(todo)}>
+                          <AlertDialog>
+                            <AlertDialogTrigger><Button variant="ghost" className="p-0" onClick={() => { handleEditTodo(todo); open; }}>
                                 <Image src={"/edit-button.svg"} width={15} height={15} alt="Edit"></Image>
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="sm:max-w-[425px]">
-                              <DialogHeader>
-                                <DialogTitle>Edit Todo</DialogTitle>
-                                <DialogDescription>
+                              </Button></AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>Edit Todo</AlertDialogTitle>
+                                <AlertDialogDescription>
                                   Make changes to your Todo here. Click save when you're done.
-                                </DialogDescription>
-                              </DialogHeader>
+                                </AlertDialogDescription>
+                              </AlertDialogHeader>
                               <div className="grid gap-4 py-4">
                                 <div className="grid grid-cols-4 items-center gap-4">
                                   <Label htmlFor="name" className="text-right">
@@ -157,11 +156,12 @@ export default function Home() {
                                   <Input id="name" value={editedTask} onChange={handleInputChange} className="col-span-3" />
                                 </div>
                               </div>
-                              <DialogFooter>
-                                <Button onClick={handleSaveChanges}>Save changes</Button>
-                              </DialogFooter>
-                            </DialogContent>
-                          </Dialog>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                <AlertDialogAction onClick={handleSaveChanges}>Save Changes</AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
                         </div>
                       </div>
                     </div>
