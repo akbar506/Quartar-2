@@ -10,7 +10,8 @@
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../sanity.config";
 
-export const dynamic = "force-static";
+// Opt out of caching for all data requests in the route segment
+export const dynamic = "force-dynamic";
 
 export { metadata, viewport } from "next-sanity/studio";
 
