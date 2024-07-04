@@ -3,7 +3,7 @@ import { client } from "../../sanity/lib/client";
 import { urlForImage } from "../../sanity/lib/image";
 
 const getBlogs = async () => {
-  return client.fetch(`*[_type == "blogs"]`);
+  return await client.fetch(`*[_type == "blogs"]`);
 };
 
 export default async function Home() {
